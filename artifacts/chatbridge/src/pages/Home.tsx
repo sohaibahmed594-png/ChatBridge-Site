@@ -5,6 +5,7 @@ import StatsBar from "@/components/StatsBar";
 import Features from "@/components/Features";
 import Modes from "@/components/Modes";
 import HowItWorks from "@/components/HowItWorks";
+import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Features />
         <Modes />
         <HowItWorks />
+        <Reviews />
         <FAQ />
       </main>
       <Footer />

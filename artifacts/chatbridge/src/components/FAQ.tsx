@@ -29,17 +29,17 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-32" id="faq">
+    <section className="py-28" id="faq">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white">Frequently Asked <span className="text-primary">Questions</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white">Frequently asked questions</h2>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2">
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
-              className="bg-card border border-white/5 rounded-2xl overflow-hidden hover:border-primary/30 transition-colors duration-300"
+              className="bg-card border border-white/[0.06] rounded-xl overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -49,9 +49,9 @@ export default function FAQ() {
                 className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="text-base font-semibold text-white">{faq.q}</span>
-                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-                  {open === i ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                <span className="text-base font-medium text-white/90">{faq.q}</span>
+                <span className="flex-shrink-0 w-7 h-7 rounded-md bg-white/[0.05] flex items-center justify-center text-white/40">
+                  {open === i ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                 </span>
               </button>
 
@@ -64,7 +64,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                   >
-                    <div className="px-6 pb-5 text-white/60 leading-relaxed border-t border-white/5 pt-4">
+                    <div className="px-6 pb-5 text-white/55 leading-relaxed border-t border-white/[0.05] pt-4">
                       {faq.a}
                     </div>
                   </motion.div>

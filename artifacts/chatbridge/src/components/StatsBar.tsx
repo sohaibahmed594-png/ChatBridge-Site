@@ -9,25 +9,31 @@ const stats = [
 
 export default function StatsBar() {
   return (
-    <div className="border-y border-primary/20 bg-primary/[0.03]">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary/10">
+    <div className="py-12">
+      <div className="container mx-auto px-6 max-w-4xl">
+        <motion.div
+          className="rounded-2xl border border-white/[0.06] bg-white/[0.025] px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              className="py-8 flex flex-col items-center justify-center text-center gap-1"
+              className="flex flex-col items-center text-center gap-1"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <span className="text-4xl md:text-5xl font-bold text-primary tracking-tight">
+              <span className={`text-4xl md:text-5xl font-bold tracking-tight ${i === 0 ? "text-primary" : "text-white"}`}>
                 {stat.value}
               </span>
-              <span className="text-sm text-white/50 font-medium">{stat.label}</span>
+              <span className="text-sm text-white/40 font-medium">{stat.label}</span>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

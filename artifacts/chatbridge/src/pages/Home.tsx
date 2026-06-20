@@ -6,7 +6,6 @@ import Features from "@/components/Features";
 import Modes from "@/components/Modes";
 import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
-import Feedback from "@/components/Feedback";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
         <Modes />
         <HowItWorks />
         <FAQ />
-        <Feedback />
       </main>
       <Footer />
     </div>

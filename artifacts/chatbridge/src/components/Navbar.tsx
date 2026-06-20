@@ -35,11 +35,10 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollTo("features")} className="text-sm font-medium text-white/70 hover:text-white transition-colors">Features</button>
           <button onClick={() => scrollTo("how-it-works")} className="text-sm font-medium text-white/70 hover:text-white transition-colors">How it works</button>
-          <button onClick={() => scrollTo("feedback")} className="text-sm font-medium text-white/70 hover:text-white transition-colors">Feedback</button>
         </nav>
         <div>
           <a
-            href="https://chrome.google.com/webstore/detail/chat-bridge"
+            href="https://chromewebstore.google.com/detail/hagmbackefkfehejdegdjbajppfhjmhc?utm_source=item-share-cb"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-md text-sm font-semibold hover:bg-primary/20 hover:border-primary/50 transition-all shadow-[0_0_15px_rgba(0,255,136,0.1)] hover:shadow-[0_0_20px_rgba(0,255,136,0.2)]"

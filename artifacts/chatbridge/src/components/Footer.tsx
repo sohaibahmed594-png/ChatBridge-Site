@@ -4,8 +4,6 @@ import { Terminal } from "lucide-react";
 const navLinks = [
   { label: "Features", href: "#features" },
   { label: "How it works", href: "#how-it-works" },
-  { label: "Feedback", href: "#feedback" },
-  { label: "Privacy Policy", href: "#" },
 ];
 
 export default function Footer() {
